@@ -1,0 +1,50 @@
+.header {
+	position: fixed;
+    width: 100%;
+	z-index: 3;
+	top: 20px;
+	&_menu, &_social, &_contacts {
+		display: flex;
+		align-items: center;
+		list-style-type: none;
+		&_logo {
+			img {
+				height: 61px;
+			}
+		}
+        &_text {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding-left: 18px;
+            border-left: 1px solid #000;
+        }
+	}
+    &_contacts {
+        flex-direction: column;
+        align-items: end;
+        img {
+            margin-right: 12px;
+        }
+    }
+	&_contacts, &_social {
+		gap: 10px 14px;
+	}
+    &_point {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-right: 12px;
+        border-radius: 100%;
+        background: #25d366;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+    .mobile {
+        display: none;
+    }
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	height: 75px;
+}

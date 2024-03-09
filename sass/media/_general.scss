@@ -1,2 +1,10 @@
 @import 'title';
 @import 'button';
+@import 'header';
+
+.show {
+	display: block;
+}
+.flex {
+	display: flex;
+}
