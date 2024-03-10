@@ -8,10 +8,17 @@
 
 }
 @media (max-width: 768px) {
-    .header_btn {
-        width: 92.81%;
-        height: 31px;
-        font-size: 10px;
+    .btn {
+        &_header {
+            width: 92.81%;
+            height: 31px;
+            font-size: 10px;
+        }
+        &_promo {
+            width: 86.81%;
+            height: 35px;
+            font-size: 12px;
+        }
     }
 }
 @media (max-width: 480px) {

@@ -1,7 +1,11 @@
 @import 'title';
 @import 'button';
 @import 'header';
+@import 'promo';
 
+.hide {
+	display: none;
+}
 .show {
 	display: block;
 }

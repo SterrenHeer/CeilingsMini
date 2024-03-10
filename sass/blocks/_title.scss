@@ -5,11 +5,26 @@
 	&_22 {
 		font-size: 22px;
 	}
+	&_24 {
+		font-size: 24px;
+	}
+	&_32 {
+		font-size: 32px;
+	}
+	&_40 {
+		font-size: 40px;
+	}
+	&_55 {
+		font-size: 55px;
+	}
 }
 .descr {
     font-weight: 400;
     font-size: 14px;
     color: #000;
+	&_16 {
+		font-size: 16px;
+	}
 }
 .semi-bold {
 	font-weight: 600;
