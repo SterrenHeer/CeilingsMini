@@ -3,6 +3,7 @@
     min-height: 874px;
     background: url('../img/promo_bg.png') no-repeat 100%/cover;
     &_wrapper {
+        position: relative;
         display: flex;
         justify-content: space-between;
     }
@@ -43,15 +44,14 @@
         }
     }
     &_images {
-        position: relative;
         width: 38.4%;
         .main {
             width: 100%;
         }
         .optional {
             position: absolute;
-            width: 55.9%;
-            bottom: 0;
+            width: 21.5%;
+            bottom: -420px;
             right: 0;
         }
     }
@@ -85,6 +85,7 @@
             display: flex;
             gap: 8px;
             padding-left: 14px;
+            padding-top: 7px;
         }
         &_item {
             width: 6px;

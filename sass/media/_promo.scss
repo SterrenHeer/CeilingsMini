@@ -1,0 +1,102 @@
+@media (max-width:1600px) {
+    .promo {
+        &_images {
+            .optional {
+                bottom: -220px;
+            }
+        }
+    }
+}
+@media (max-width:1440px) {
+    .promo {
+        &_images {
+            .optional {
+                bottom: -280px;
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .promo {
+        &_images {
+            .optional {
+                bottom: -220px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .promo {
+        &_content {
+            width: 100%;
+            &_items {
+                margin-top: 19px;
+                flex-wrap: wrap;
+                gap: 26px 0;
+            }
+            &_item {
+                width: calc(48.23% - 24px);
+                min-height: 134px;
+                padding: 15px 12px 15px 12px;
+                &_image {
+                    bottom: -10px;
+                    right: -8px;
+                    width: 30%;
+                }
+            }
+        }
+        &_images {
+            display: none;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .promo {
+        padding-top: 69px;
+        min-height: 848px;
+        &_content {
+            &_item {
+                &_image {
+                    bottom: -20px;
+                    width: 45%;
+                }
+            }
+        }
+        .title_40, .title_55, .title_24 {
+            margin-top: 12px;
+        }
+        &_test {
+            &_content {
+                flex-direction: column;
+                align-items: start;
+            }
+            &_time {
+                margin-top: 12px;
+                img {
+                    height: 40px;
+                }
+            }
+            .title_32 {
+                margin-top: 37px;
+            }
+            .btn_test {
+                order: 1;
+                margin-top: 0;
+            }
+        }
+        &_tab {
+            &_items {
+                display: flex;
+                gap: 5px;
+                padding-left: 7px;
+            }
+            &_item {
+                width: 4px;
+                height: 4px;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+
+}

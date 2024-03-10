@@ -22,8 +22,20 @@
 @media (max-width: 480px) {
     .title {
         font-size: 14px;
+        &_32 {
+            font-size: 16px;
+        }
+        &_40 {
+            font-size: 20px;
+        }
+        &_55 {
+            font-size: 32px;
+        }
     }
     .descr {
         font-size: 10px;
+        &_16 {
+            font-size: 14px;
+        }
     }
 }
