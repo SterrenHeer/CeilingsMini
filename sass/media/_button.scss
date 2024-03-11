@@ -21,8 +21,14 @@
         }
         &_test {
             width: 100%;
-            height: 79px;
-            font-size: 20px;
+            &_promo {
+                height: 79px;
+                font-size: 20px;
+            }
+            &_gallery {
+                height: 55px;
+                font-size: 16px;
+            }
         }
     }
 }
