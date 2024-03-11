@@ -10,10 +10,10 @@
             top: calc(50% - 20px);
         }
         &_prev {
-            left: -40px;
+            left: -80px;
         }
         &_next {
-            right: -40px;
+            right: -80px;
         }
         &_wrapper {
             overflow: hidden;
@@ -46,18 +46,44 @@
     }
     &_slide {
         display: flex;
-        justify-content: space-between;
+        gap: 8%;
         &_image {
-            width: 52.23%;
-            border-radius: 20px;
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            width: 52%;
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
             }
         }
         &_content {
-            width: 41.29%;
+            width: 41%;
+            &_address {
+                margin-top: 55px;
+                display: flex;
+                align-items: end;
+                gap: 23px;
+            }
+            &_equipment {
+                margin-top: 55px;
+                .light {
+                    margin-top: 22px;
+                }
+            }
+            &_parameters {
+                margin-top: 102px;
+                display: flex;
+                gap: 67px;
+                .title_24 {
+                    margin-top: 11px;
+                }
+            }
+            .title_32 {
+                margin-top: 49px;
+            }
+            .btn_test {
+                margin-top: 65px;
+            }
         }
     }
     .title_40 {

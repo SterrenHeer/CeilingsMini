@@ -43,19 +43,26 @@ function tabs(tabContainerSelector, tabsSelector, tabsContentSelector, tabsParen
 function slider({container, slide, nextArrow, prevArrow, wrapper, field}) {
     let slideIndex = 1;
     let offset = 0;
+    let width
     const slides = document.querySelectorAll(slide),
         slider = document.querySelector(container),
         prev = document.querySelector(prevArrow),
         next = document.querySelector(nextArrow),
         slidesWrapper = document.querySelector(wrapper),
-        slidesField = document.querySelector(field),
-        width = window.getComputedStyle(slidesWrapper).width;
-
-    slidesField.style.width = 100 * slides.length + "%";
-
+        slidesField = document.querySelector(field);
+    
+    width = window.getComputedStyle(slidesWrapper).width;
     slides.forEach((slide) => {
-		slide.style.width = width;
-	});
+        slide.style.width = width;
+    });
+    window.addEventListener('resize', (e) => {
+        width = window.getComputedStyle(slidesWrapper).width;
+        slides.forEach((slide) => {
+            slide.style.width = width;
+        });
+    });   
+    
+    slidesField.style.width = 100 * slides.length + "%";
 
     const indicators = document.createElement('ol'),
           dots = [];
