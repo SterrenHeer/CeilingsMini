@@ -31,8 +31,8 @@
         <div class="container">
             <div class="promo_wrapper">
                 <div class="promo_content">
-                    <button class="btn btn_promo">Planuojate įrenginėti įtempiamas lubas?</button>
-                    <div class="title title_40 bold">Pakabinamos lubos per 1 dieną. Sutaupykite iki 20%</div>
+                    <button data-modal class="btn btn_promo">Planuojate įrenginėti įtempiamas lubas?</button>
+                    <div class="title title_40 bold">Pakabinamos lubos per 1 dieną. Sutaupykite iki 20%</div>
                     <div class="title title_55">IŠSIMOKĖTINAI IKI 36 MĖNESIŲ</div>
                     <div class="title title_24">Nemokamas matavimas ir apšvietimo konsultacija</div>
                     <div class="promo_content_items">
@@ -206,7 +206,7 @@
                                         <div class="title title_24 semi-bold">6 valandos</div>
                                     </div>
                                 </div>
-                                <button class="btn btn_test btn_test_gallery"><span class="bold">Palikite užklausa ir gaukite nemokamam apskaičiavima</span></button>
+                                <button data-modal class="btn btn_test btn_test_gallery"><span class="bold">Palikite užklausa ir gaukite nemokamam apskaičiavima</span></button>
                             </div>
                         </div>
                     </div>
@@ -243,6 +243,45 @@
             </div>
         </div>        
     </footer>
+    <div class="consult">
+		<div class="consult_modal">
+            <div class="title title_40 semi-bold">Konsultacijos vienu paspaudimu</div>
+            <div class="consult_divider"></div>
+            <div class="title title_24 semi-bold">Paskambinsime jums per kelias minutes:</div>
+			<div class="consult_close"><img data-close src="icons/close.svg" alt="close"></div>
+			<div class="consult_items">
+                <form class="consult_form" action="#">
+                    <div class="consult_form_content">
+                        <input name="phone" type="text" placeholder="+375 __ ___ __ __" required> 
+                        <button type="submit" class="btn btn_test btn_test_form">Siųsti</button>
+                    </div>
+                    <div class="consult_form_bottom">
+                        <label for="checkbox" class="checkbox-label descr">
+                            <input type="checkbox" id="checkbox" class="checkbox" required>
+                            <span class="checkbox-view">
+                                <img class="checkbox-icon" src="icons/check.svg" alt="box">
+                            </span>
+                            Jūs sutinkate su asmens duomenų tvarkymo sąlygomis
+                        </label>
+                    </div>
+                </form>
+                <div class="consult_advantages">
+                    <div class="consult_advantages_item">
+                        <img src="icons/li.svg" alt="li">Patikslinsime reikiamus duomenis pagal dydį ir lubų komplektaciją
+                    </div>
+                    <div class="consult_advantages_item">
+                        <img src="icons/li.svg" alt="li">Konsultuojame dėl lubų ir apšvietimo medžiagų. 
+                    </div>
+                    <div class="consult_advantages_item">
+                        <img src="icons/li.svg" alt="li">Pasirinkite tinkamą variantą ir išreikškite preliminarią kainą
+                    </div>
+                    <div class="consult_advantages_item">
+                        <img src="icons/li.svg" alt="li">Mes jums pasakysime, kokia seka daryti lubas, jei vis dar turite remontą. Jei viskas patiks, susitarkime dėl nemokamo matuoklio išvažiavimo apskaičiuoti galutinę kainą
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/script.js"></script>
 </body>

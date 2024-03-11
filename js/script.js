@@ -147,6 +147,49 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
     }
 }
 
+function openModal(modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.classList.add('hide');
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+function modal(triggerSelector, closeSelector, modalSelector) {
+    const modalTrigger = document.querySelectorAll(triggerSelector),
+        modal = document.querySelector(modalSelector);
+    modalTrigger.forEach(btn => {
+        btn.addEventListener('click', () => openModal(modalSelector));
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.getAttribute(closeSelector) == '') {
+            closeModal(modalSelector);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) { 
+            closeModal(modalSelector);
+        }
+    });
+
+    function showModalByScroll() {
+        if (window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1) {
+            openModal(modalSelector);
+            window.removeEventListener('scroll', showModalByScroll);
+        }
+    }
+
+    window.addEventListener('scroll', showModalByScroll);
+}
+
 tabs('.promo_content_item.tab_1', '.promo_tab_item', '.promo_tab_content', '.promo_tab_items', 'promo_tab_active');
 tabs('.promo_content_item.tab_2', '.promo_tab_item', '.promo_tab_content', '.promo_tab_items', 'promo_tab_active');
 tabs('.promo_content_item.tab_3', '.promo_tab_item', '.promo_tab_content', '.promo_tab_items', 'promo_tab_active');
@@ -161,3 +204,5 @@ slider({
     nextArrow: '.gallery_slider_next',
     prevArrow: '.gallery_slider_prev'
 });
+
+modal('[data-modal]', 'data-close', '.consult');
