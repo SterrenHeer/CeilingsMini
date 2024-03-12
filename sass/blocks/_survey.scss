@@ -1,9 +1,12 @@
 .survey {
     margin-top: 163px;
     &_wrapper {
-        margin: 0 auto;
+        margin: 31px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 28px 0 23px 0;
-        width: 78.83%;
+        width: 78.832%;
         max-height: 811px;
         border-radius: 20px;
         box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.25);
@@ -11,7 +14,6 @@
     }
     &_header, &_body, &_bottom {
         width: 73.53%;
-        margin: 0 auto;
     }
     &_header {
         display: flex;
@@ -23,18 +25,24 @@
     }
     &_body {
         margin-top: 17px;
-        &_items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2.9% 3%;
-        }
+        width: 73.534%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px 3%;
         &_item {
-            width: 31.3%;
+            width: 30.955%;
             display: flex;
             flex-direction: column;
             gap: 15px;
             &_img {
                 width: 100%;
+            }
+            &_text {
+                overflow: visible;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 200%;
+                color: #000;
             }
         }
     }
@@ -64,16 +72,15 @@
         }
         &_label {
             display: flex;
-            align-items: center;
+            gap: 19px;
             cursor: pointer;
         }
         &_view {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 30px;
+            min-width: 30px;
             height: 30px;
-            margin-right: 19px;
             border-radius: 100%;
             background: #e5e8f0;
             transition: .3s;
@@ -90,5 +97,10 @@
         margin-top: 26px;
         display: flex;
         justify-content: center;
+    }
+    .title_40 {
+        width: 78.83%;
+        margin: 0 auto;
+        text-align: center;
     }
 }
