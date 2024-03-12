@@ -48,7 +48,7 @@
             flex-direction: column;
             gap: 23px;
         }
-        input {
+        &_input {
             height: 56px;
             padding: 12px 22px;
             background: #faf9fb;
@@ -63,18 +63,18 @@
                 color: rgba(0, 0, 0, 0.6);
             }
         }
-        .checkbox {
+        &_checkbox {
             position: absolute;
             z-index: -1;
         }
         
-        .checkbox-label {
+        &_label {
             display: flex;
             align-items: center;
             cursor: pointer;
         }
         
-        .checkbox-view {
+        &_view {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -86,17 +86,17 @@
             transition: .3s;
         }
         
-        .checkbox-icon {
+        &_icon {
             opacity: 0;
             transition: .3s;
         }
         
-        .checkbox:checked + .checkbox-view {
+        &_checkbox:checked + &_view {
             background-color: linear-gradient(0deg, #fff622 0%, #fffa89 100%);
             border: none;
         }
         
-        .checkbox:checked + .checkbox-view .checkbox-icon {
+        &_checkbox:checked + &_view &_icon {
             opacity: 1;
         }
     }
