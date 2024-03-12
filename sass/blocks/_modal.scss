@@ -12,6 +12,7 @@
         width: 67.76%;
         max-width: 1114px;
         min-height: 714px;
+        max-height: 100vh;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -23,7 +24,7 @@
         width: 71.2%;
         padding: 29px 0 0 61px;
         display: flex;
-        gap: 7.8%;;
+        gap: 7.8%;
     }
     &_close {
         position: absolute;
@@ -149,10 +150,13 @@
         }
     }
     .title_40 {
-        margin-top: 26px;
+        margin-top: 37px;
         text-align: center;
     }
     .title_24 {
         margin: 57px 0 0 67px;
+    }
+    .br {
+        display: none;
     }
 }

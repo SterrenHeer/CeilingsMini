@@ -1,5 +1,6 @@
 @import 'title';
 @import 'button';
+@import 'modal';
 @import 'header';
 @import 'promo';
 @import 'gallery';
@@ -13,7 +14,7 @@
 }
 .flex {
 	display: flex;
-}
+} 
 
 @media (max-width: 768px) {
     .container {

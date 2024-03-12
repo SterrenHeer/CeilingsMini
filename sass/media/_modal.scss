@@ -1,0 +1,57 @@
+@media (max-width:1440px) {
+
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+    .consult {
+        &_modal {
+            position: absolute;
+            width: 86.6%;
+            max-width: none;
+            min-height: 405px;
+            border-radius: 15px;
+        }
+        &_items {
+            width: 88.14%;
+            padding: 13px 5.77%;
+        }
+        &_close {
+            height: 22px;
+            top: 21px;
+            right: 17px;
+        }
+        &_divider {
+            margin-top: 13px;
+        }
+        &_form {
+            width: 100%;
+            max-width: none;
+            gap: 16px;
+            &_content {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+        &_advantages, &_bottom {
+            display: none;
+        }
+        .title_40 {
+            margin-top: 48px;
+        }
+        .title_24 {
+            margin: 13px 0 0 0;
+            text-align: center;
+        }
+        .br {
+            display: block;
+        }
+    }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 480px) {
+
+}
