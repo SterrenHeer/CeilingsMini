@@ -1,23 +1,64 @@
 @media (max-width:1440px) {
     .title {
         font-size: 18px;
+        &_32 {
+            font-size: 28px;
+        }
+        &_40 {
+            font-size: 36px;
+        }
+        &_55 {
+            font-size: 50px;
+        }
     }
 }
 @media (max-width: 1200px) {
     .title {
         font-size: 17px;
+        &_32 {
+            font-size: 24px;
+        }
+        &_40 {
+            font-size: 32px;
+        }
+        &_55 {
+            font-size: 45px;
+        }
     }
 }
 @media (max-width: 992px) {
     .title {
         font-size: 16px;
+        &_32 {
+            font-size: 20px;
+        }
+        &_40 {
+            font-size: 28px;
+        }
+        &_55 {
+            font-size: 40px;
+        }
     }
     .descr {
         font-size: 12px;
+        &_16 {
+            font-size: 15px;
+        }
     }
 }
 @media (max-width: 768px) {
-
+    .title {
+        font-size: 15px;
+        &_32 {
+            font-size: 16px;
+        }
+        &_40 {
+            font-size: 24px;
+        }
+        &_55 {
+            font-size: 35px;
+        }
+    }
 }
 @media (max-width: 480px) {
     .title {
