@@ -1,4 +1,5 @@
 .consult {
+    position: relative;
     display: none;
     position: fixed;
     z-index: 4;
@@ -9,6 +10,7 @@
     &_modal {
         position: absolute;
         width: 67.76%;
+        max-width: 1114px;
         min-height: 714px;
         top: 50%;
         left: 50%;
@@ -18,9 +20,10 @@
         background: #d9d9d9;
     }
     &_items {
-        margin: 29px 0 0 61px;
+        width: 71.2%;
+        padding: 29px 0 0 61px;
         display: flex;
-        gap: 59px;
+        gap: 7.8%;;
     }
     &_close {
         position: absolute;
@@ -40,6 +43,8 @@
         background: #fff;
     }
     &_form {
+        width: 44.8%;
+        max-width: 336px;
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -67,13 +72,11 @@
             position: absolute;
             z-index: -1;
         }
-        
         &_label {
             display: flex;
             align-items: center;
             cursor: pointer;
         }
-        
         &_view {
             display: flex;
             align-items: center;
@@ -85,19 +88,64 @@
             background: #fff;
             transition: .3s;
         }
-        
         &_icon {
             opacity: 0;
             transition: .3s;
         }
-        
         &_checkbox:checked + &_view {
             background-color: linear-gradient(0deg, #fff622 0%, #fffa89 100%);
             border: none;
         }
-        
         &_checkbox:checked + &_view &_icon {
             opacity: 1;
+        }
+    }
+    &_advantages {
+        width: 47.3%;
+        position: relative;
+        max-width: 355px;
+        min-height: 311px;
+        &_bg {
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &_items {
+            padding: 15px 17px 46px 12px;
+           display: flex;
+           flex-direction: column;
+           gap: 17px;
+        }
+        &_item {
+            display: flex;
+            align-items: start;
+            gap: 9px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #000;
+        }
+    }
+    &_bottom {
+        position: absolute;
+        bottom: 0;
+        z-index: -2;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        &_left {
+            padding-left: 28px;
+            width: 27.35%;
+            max-height: 239px;
+            img {
+                width: 100%;
+            }
+        }
+        &_right {
+            width: 48.14%;
         }
     }
     .title_40 {
