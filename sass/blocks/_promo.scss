@@ -15,9 +15,6 @@
             justify-content: space-between;
         }
         &_item {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             position: relative;
             width: calc(22.66% - 18px);
             min-height: 205px;
@@ -41,6 +38,9 @@
         }
         .title_24 {
             margin-top: 10px;
+        }
+        .descr_16 {
+            margin-top: 8px;
         }
     }
     &_images {
@@ -73,28 +73,6 @@
         }
         .btn_test {
             margin-top: 27px;
-        }
-    }
-    &_tab {
-        &_container {
-            .descr_16 {
-                margin-top: 8px;
-            }
-        }
-        &_items {
-            display: flex;
-            gap: 8px;
-            padding-left: 14px;
-            padding-top: 7px;
-        }
-        &_item {
-            width: 6px;
-            height: 6px;
-            border-radius: 100%;
-            background: #c1c1c1;
-        }
-        &_active {
-            background: #000;
         }
     }
 }
