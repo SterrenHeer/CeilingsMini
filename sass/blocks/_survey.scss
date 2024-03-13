@@ -1,8 +1,8 @@
 .survey {
     margin-top: 163px;
     &_wrapper {
+        display: none;
         margin: 31px auto 0 auto;
-        display: flex;
         flex-direction: column;
         align-items: center;
         padding: 28px 0 23px 0;
@@ -11,6 +11,9 @@
         border-radius: 20px;
         box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.25);
         background: #fff;
+        &:first-child {
+            display: flex;
+        }
     }
     &_header, &_body, &_bottom {
         width: 73.53%;
@@ -56,6 +59,62 @@
                 font-size: 14px;
                 line-height: 200%;
                 color: #000;
+            }
+        }
+        &_area {
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &_range {
+                margin-top: 26px;
+                appearance: none;
+                width: 100%;
+                height: 16px;
+                border-radius: 50px;
+                background: #f2f0f5;
+                transition: .3s;
+                &::-webkit-slider-thumb {
+                    appearance: none;
+                    width: 32px;
+                    height: 32px;
+                    border: 8px solid #fff;
+                    border-radius: 100%;
+                    background: linear-gradient(0deg, #fff622 0%, #fffa89 100%);
+                    cursor: pointer;
+                }
+                &::-moz-range-thumb {
+                    width: 32px;
+                    height: 32px;
+                    border: 8px solid #fff;
+                    border-radius: 100%;
+                    background: linear-gradient(0deg, #fff622 0%, #fffa89 100%);
+                    cursor: pointer;
+                }
+            }
+            &_value {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                width: 17.15%;
+                #area_value {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 76.84%;
+                    height: 56px;
+                    background: #f2f0f5;
+                }
+            }
+            &_bottom {
+                margin-top: 15px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            img {
+                width: 100%;
             }
         }
     }

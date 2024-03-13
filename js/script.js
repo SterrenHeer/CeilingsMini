@@ -1,6 +1,31 @@
-$('.header_toggler').click(function() {
-    $('.header_contacts').toggleClass('show flex');
+const header_toggler = document.querySelector('.header_toggler')
+const header_contacts = document.querySelector('.header_contacts')
+
+header_toggler.addEventListener('click', (e) => {
+    header_contacts.classList.toggle('show')
+    header_contacts.classList.toggle('flex')
+
 });
+
+const survey_buttons = document.querySelectorAll('.btn_test_survey')
+
+survey_buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault()
+        let next = e.target.getAttribute('data-show')
+        e.target.parentElement.parentElement.style.display = 'none';
+        document.querySelector(`#${next}`).style.display = 'flex';
+    });
+});
+
+const area_range = document.querySelector(".survey_body_area_range");
+const area_value = document.querySelector("#area_value");
+
+area_value.innerHTML = area_range.value;
+
+area_range.oninput = function() {
+    area_value.innerHTML = this.value;
+}
 
 function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow, prevArrow}) {
     let slideIndex = 1,
