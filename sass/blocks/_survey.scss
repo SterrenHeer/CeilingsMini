@@ -15,20 +15,30 @@
     &_header, &_body, &_bottom {
         width: 73.53%;
     }
+    &_count {
+        padding: 0 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 19.79%;
+        height: 40px;
+        border-radius: 100px;
+        background: #fff622;
+    }
     &_header {
         display: flex;
         flex-direction: column;
         align-items: center;
         .thin {
             margin-top: 9px;
+            text-align: center;
         }
     }
     &_body {
         margin-top: 17px;
-        width: 73.534%;
         display: flex;
         flex-wrap: wrap;
-        gap: 25px 3%;
+        gap: 25px 3.56%;
         &_item {
             width: 30.955%;
             display: flex;
@@ -36,6 +46,9 @@
             gap: 15px;
             &_img {
                 width: 100%;
+                &_mobile {
+                    display: none;
+                }
             }
             &_text {
                 overflow: visible;
@@ -102,5 +115,8 @@
         width: 78.83%;
         margin: 0 auto;
         text-align: center;
+    }
+    .title_28 {
+        margin-top: 21px;
     }
 }
