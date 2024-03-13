@@ -1,23 +1,23 @@
-const header_toggler = document.querySelector('.header_toggler')
-const header_contacts = document.querySelector('.header_contacts')
+const header_toggler = document.querySelector('.header_toggler');
+const header_contacts = document.querySelector('.header_contacts');
 
 header_toggler.addEventListener('click', (e) => {
-    header_contacts.classList.toggle('show')
-    header_contacts.classList.toggle('flex')
+    header_contacts.classList.toggle('show');
+    header_contacts.classList.toggle('flex');
 });
 
-const survey_buttons = document.querySelectorAll('.btn_test_survey, .btn_back')
+const survey_buttons = document.querySelectorAll('.btn_test_survey, .btn_back');
 
 survey_buttons.forEach(button => {
     button.addEventListener('click', (e) => {
-        e.preventDefault()
-        let next = e.target.getAttribute('data-show')
+        e.preventDefault();
+        let next = e.target.getAttribute('data-show');
         e.target.parentElement.parentElement.style.display = 'none';
         document.querySelector(`#${next}`).style.display = 'flex';
     });
 });
 
-const area_range = document.querySelector(".survey_body_area_range");
+const area_range = document.querySelector("#area_range");
 const area_value = document.querySelector("#area_value");
 
 area_value.innerHTML = area_range.value;
@@ -25,6 +25,18 @@ area_value.innerHTML = area_range.value;
 area_range.oninput = function() {
     area_value.innerHTML = this.value;
 }
+
+const counters_items = document.querySelectorAll(".counters");
+const counters_values = document.querySelectorAll(".values");
+
+counters_values.forEach((item, index) => {
+    item.innerHTML = counters_items[index].value;
+});
+counters_items.forEach((item, index) => {
+    item.oninput = function() {
+        counters_values[index].innerHTML = item.value;
+    }
+});
 
 function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow, prevArrow}) {
     let slideIndex = 1,

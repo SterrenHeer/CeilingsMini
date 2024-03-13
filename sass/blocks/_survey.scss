@@ -117,6 +117,42 @@
                 width: 100%;
             }
         }
+        &_counters {
+            margin-top: 7px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
+        &_counter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &_content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+            }
+            &_value {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 250%;
+                color: #000;
+            }
+            &_bottom {
+                margin-top: 1px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            &:first-child {
+                margin-top: 5px;
+            }
+            input {
+                margin-top: 3px;
+            }
+        }
     }
     &_progress {
         margin-top: 17px;
