@@ -1,6 +1,7 @@
 .survey {
     margin-top: 163px;
     &_wrapper {
+        position: relative;
         display: none;
         margin: 31px auto 0 auto;
         flex-direction: column;
@@ -169,6 +170,13 @@
         margin-top: 26px;
         display: flex;
         justify-content: center;
+    }
+    &_hint {
+        position: absolute;
+        bottom: 26px;
+        left: 27px;
+        display: flex;
+        gap: 9px;
     }
     .title_40 {
         width: 78.83%;

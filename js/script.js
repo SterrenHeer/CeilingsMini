@@ -4,10 +4,9 @@ const header_contacts = document.querySelector('.header_contacts')
 header_toggler.addEventListener('click', (e) => {
     header_contacts.classList.toggle('show')
     header_contacts.classList.toggle('flex')
-
 });
 
-const survey_buttons = document.querySelectorAll('.btn_test_survey')
+const survey_buttons = document.querySelectorAll('.btn_test_survey, .btn_back')
 
 survey_buttons.forEach(button => {
     button.addEventListener('click', (e) => {

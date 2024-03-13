@@ -2,7 +2,11 @@
 
 }
 @media (max-width: 1200px) {
-
+    .survey {
+        &_hint {
+            display: none;
+        }
+    }
 }
 @media (max-width: 992px) {
     .survey {
@@ -46,6 +50,24 @@
                 &_text {
                     font-weight: 400;
                     line-height: 129%;
+                }
+            }
+            &_area {
+                margin-top: 0;
+                &_range {
+                    height: 12px;
+                }
+                &_value {
+                    margin-top: 40px;
+                    gap: 15px;
+                    width: 48.16%;
+                    #area_value {
+                        width: 73.28%;
+                        height: 40px;
+                    }
+                }
+                &_bottom {
+                    margin-top: 11px;
                 }
             }
         }
