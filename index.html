@@ -242,7 +242,7 @@
                                 <div id="area_value"></div> 
                                 <div class="title">м<sup>2</sup></div>
                             </div>
-                            <input type="range" name="range" class="survey_body_area_range" min="1" max="500" value="140">
+                            <input type="range" name="area" class="survey_body_area_range" min="1" max="500" value="140">
                             <div class="survey_body_area_bottom">
                                 <div class="title">1 м<sup>2</sup></div>
                                 <div class="title">500 м<sup>2</sup></div>
@@ -266,8 +266,8 @@
                     </div>
                     <div class="survey_body">
                         <div class="survey_body_item">
-                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_1.png" alt="location">
-                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_1.png" alt="location">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_1.png" alt="material">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_1.png" alt="material">
                             <label for="survey_form_radio_3-1" class="survey_form_label descr">
                                 <input type="radio" name="question_3" id="survey_form_radio_3-1" class="survey_form_radio" value="1" required checked>
                                 <span class="survey_form_view">
@@ -277,8 +277,8 @@
                             </label>
                         </div>
                         <div class="survey_body_item">
-                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_2.png" alt="location">
-                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_2.png" alt="location">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_2.png" alt="material">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_2.png" alt="material">
                             <label for="survey_form_radio_3-2" class="survey_form_label descr">
                                 <input type="radio" name="question_3" id="survey_form_radio_3-2" class="survey_form_radio" value="2" required>
                                 <span class="survey_form_view">
@@ -288,8 +288,8 @@
                             </label>
                         </div>
                         <div class="survey_body_item">
-                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_3.png" alt="location">
-                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_3.png" alt="location">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_3.png" alt="material">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_3.png" alt="material">
                             <label for="survey_form_radio_3-3" class="survey_form_label descr">
                                 <input type="radio" name="question_3" id="survey_form_radio_3-3" class="survey_form_radio" value="3" required>
                                 <span class="survey_form_view">
@@ -299,8 +299,8 @@
                             </label>
                         </div>
                         <div class="survey_body_item">
-                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_4.png" alt="location">
-                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_4.png" alt="location">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_4.png" alt="material">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_4.png" alt="material">
                             <label for="survey_form_radio_3-4" class="survey_form_label descr">
                                 <input type="radio" name="question_3" id="survey_form_radio_3-4" class="survey_form_radio" value="4" required>
                                 <span class="survey_form_view">
@@ -310,8 +310,8 @@
                             </label>
                         </div>
                         <div class="survey_body_item">
-                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_5.png" alt="location">
-                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_5.png" alt="location">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_5.png" alt="material">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_5.png" alt="material">
                             <label for="survey_form_radio_3-5" class="survey_form_label descr">
                                 <input type="radio" name="question_3" id="survey_form_radio_3-5" class="survey_form_radio" value="5" required>
                                 <span class="survey_form_view">
@@ -321,8 +321,8 @@
                             </label>
                         </div>
                         <div class="survey_body_item">
-                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_6.png" alt="location">
-                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_6.png" alt="location">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/material_6.png" alt="material">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/material_m_6.png" alt="material">
                             <label for="survey_form_radio_3-6" class="survey_form_label descr">
                                 <input type="radio" name="question_3" id="survey_form_radio_3-6" class="survey_form_radio" value="6" required>
                                 <span class="survey_form_view">
@@ -334,6 +334,191 @@
                     </div>
                     <div class="survey_bottom">
                         <button class="btn btn_back" data-show="survey_wrapper_2">Назад</button>
+                        <button type="submit" data-show="survey_wrapper_4" class="btn btn_test btn_test_survey">Далее</button>
+                    </div>
+                    <div class="survey_hint">
+                        <img src="icons/click.svg" alt="hint">
+                        <div class="descr descr_16"><span class="semi-bold">Выберите вариант ответа</span><br>и нажмите кнопку «Далее»</div>
+                    </div>
+                </div>
+                <div id="survey_wrapper_4" class="survey_wrapper">
+                    <div class="survey_header">
+                        <div class="survey_count title">Шаг 4 из 6</div>
+                        <progress class="survey_progress" max="100" value="66.66"></progress>
+                        <div class="title title_28">Какой вид потолка вы хотите установить?</div>
+                    </div>
+                    <div class="survey_body">
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/type_1.png" alt="type">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/type_m_1.png" alt="type">
+                            <label for="survey_form_radio_4-1" class="survey_form_label descr">
+                                <input type="radio" name="question_4" id="survey_form_radio_4-1" class="survey_form_radio" value="1" required checked>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Обычный</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/type_2.png" alt="type">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/type_m_2.png" alt="type">
+                            <label for="survey_form_radio_4-2" class="survey_form_label descr">
+                                <input type="radio" name="question_4" id="survey_form_radio_4-2" class="survey_form_radio" value="2" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Двухуров&shy;невый</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/type_3.png" alt="type">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/type_m_3.png" alt="type">
+                            <label for="survey_form_radio_4-3" class="survey_form_label descr">
+                                <input type="radio" name="question_4" id="survey_form_radio_4-3" class="survey_form_radio" value="3" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Парящий</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/type_4.png" alt="type">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/type_m_4.png" alt="type">
+                            <label for="survey_form_radio_4-4" class="survey_form_label descr">
+                                <input type="radio" name="question_4" id="survey_form_radio_4-4" class="survey_form_radio" value="4" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Перфориро&shy;ванный</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/type_5.png" alt="type">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/type_m_5.png" alt="type">
+                            <label for="survey_form_radio_4-5" class="survey_form_label descr">
+                                <input type="radio" name="question_4" id="survey_form_radio_4-5" class="survey_form_radio" value="5" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">С фото&shy;печатью</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/type_6.png" alt="type">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/type_m_6.png" alt="type">
+                            <label for="survey_form_radio_4-6" class="survey_form_label descr">
+                                <input type="radio" name="question_4" id="survey_form_radio_4-6" class="survey_form_radio" value="6" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">С LED линиями</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="survey_bottom">
+                        <button class="btn btn_back" data-show="survey_wrapper_3">Назад</button>
+                        <button type="submit" data-show="survey_wrapper_5" class="btn btn_test btn_test_survey">Далее</button>
+                    </div>
+                    <div class="survey_hint">
+                        <img src="icons/click.svg" alt="hint">
+                        <div class="descr descr_16"><span class="semi-bold">Выберите вариант ответа</span><br>и нажмите кнопку «Далее»</div>
+                    </div>
+                </div>
+                <div id="survey_wrapper_5" class="survey_wrapper">
+                    <div class="survey_header">
+                        <div class="survey_count title">Шаг 5 из 6</div>
+                        <progress class="survey_progress" max="100" value="83.33"></progress>
+                        <div class="title title_28">Укажите количество элементов на потолке</div>
+                    </div>
+                    <div class="survey_body">
+
+                    </div>
+                    <div class="survey_bottom">
+                        <button class="btn btn_back" data-show="survey_wrapper_4">Назад</button>
+                        <button class="btn btn_test btn_test_survey" data-show="survey_wrapper_6">Далее</button>
+                    </div>
+                    <div class="survey_hint">
+                        <img src="icons/click.svg" alt="hint">
+                        <div class="descr descr_16"><span class="semi-bold">Выберите вариант ответа</span><br>и нажмите кнопку «Далее»</div>
+                    </div>
+                </div>
+                <div id="survey_wrapper_6" class="survey_wrapper">
+                    <div class="survey_header">
+                        <div class="survey_count title">Шаг 6 из 6</div>
+                        <progress class="survey_progress" max="100" value="100"></progress>
+                        <div class="title title_28">Выберите дополнительные элементы</div>
+                        <div class="title thin">(можно выбрать несколько вариантов)</div>
+                    </div>
+                    <div class="survey_body">
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/element_1.png" alt="element">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/element_m_1.png" alt="element">
+                            <label for="survey_form_radio_6-1" class="survey_form_label descr">
+                                <input type="radio" name="question_6" id="survey_form_radio_6-1" class="survey_form_radio" value="1" required checked>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Скрытый карниз</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/element_2.png" alt="element">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/element_m_2.png" alt="element">
+                            <label for="survey_form_radio_6-2" class="survey_form_label descr">
+                                <input type="radio" name="question_6" id="survey_form_radio_6-2" class="survey_form_radio" value="2" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Люстры</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/element_3.png" alt="element">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/element_m_3.png" alt="element">
+                            <label for="survey_form_radio_6-3" class="survey_form_label descr">
+                                <input type="radio" name="question_6" id="survey_form_radio_6-3" class="survey_form_radio" value="3" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Светильники</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/element_4.png" alt="element">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/element_m_4.png" alt="element">
+                            <label for="survey_form_radio_6-4" class="survey_form_label descr">
+                                <input type="radio" name="question_6" id="survey_form_radio_6-4" class="survey_form_radio" value="4" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Led подсветка<br>по периметру</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/element_5.png" alt="element">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/element_m_5.png" alt="element">
+                            <label for="survey_form_radio_6-5" class="survey_form_label descr">
+                                <input type="radio" name="question_6" id="survey_form_radio_6-5" class="survey_form_radio" value="5" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Световые линии</div>
+                            </label>
+                        </div>
+                        <div class="survey_body_item">
+                            <img class="survey_body_item_img survey_body_item_img_full" src="img/element_6.png" alt="element">
+                            <img class="survey_body_item_img survey_body_item_img_mobile" src="img/element_m_6.png" alt="element">
+                            <label for="survey_form_radio_6-6" class="survey_form_label descr">
+                                <input type="radio" name="question_6" id="survey_form_radio_6-6" class="survey_form_radio" value="6" required>
+                                <span class="survey_form_view">
+                                    <img class="survey_form_icon" src="icons/mark.svg" alt="mark">
+                                </span>
+                                <div class="survey_body_item_text">Ничего не нужно</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="survey_bottom">
+                        <button class="btn btn_back" data-show="survey_wrapper_5">Назад</button>
                         <button type="submit" data-show="survey_wrapper_1" class="btn btn_test btn_test_survey">Далее</button>
                     </div>
                     <div class="survey_hint">
