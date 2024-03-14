@@ -38,6 +38,15 @@ counters_items.forEach((item, index) => {
     }
 });
 
+const formElement = document.getElementById('form1'); // извлекаем элемент формы
+formElement.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const formData = new FormData(formElement); // создаём объект FormData, передаём в него элемент формы
+  // теперь можно извлечь данные
+  const name = formData.get('name'); // 'John'
+  const surname = formData.get('surname'); // 'Smith'
+});
+
 function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow, prevArrow}) {
     let slideIndex = 1,
         offset = 0,

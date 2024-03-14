@@ -2,6 +2,7 @@
     margin-top: 163px;
     &_wrapper {
         position: relative;
+        overflow: hidden;
         display: none;
         margin: 31px auto 0 auto;
         flex-direction: column;
@@ -212,6 +213,113 @@
         left: 27px;
         display: flex;
         gap: 9px;
+    }
+    &_result {
+        width: 100%;
+        &_content {
+            padding-left: 5%;
+            width: 45%;
+        }
+        &_buttons {
+            margin-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            width: 72.94%;
+        }
+        &_form {
+            margin-top: 40px;
+            width: 83.61%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            &_content {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+            &_input {
+                height: 56px;
+                padding: 12px 22px;
+                background: #ebebeb;
+                font-weight: 400;
+                font-size: 16px;
+                color: rgba(0, 0, 0, 0.6);
+                border: none;
+                outline: none;
+                &::placeholder {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 0.6);
+                }
+            }
+            &_checkbox {
+                position: absolute;
+                z-index: -1;
+            }
+            &_label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+            &_view {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 16px;
+                height: 16px;
+                margin-right: 10px;
+                border: 1px solid #ccc;
+                background: #fff;
+                transition: .3s;
+            }
+            &_icon {
+                opacity: 0;
+                transition: .3s;
+            }
+            &_checkbox:checked + &_view {
+                background-color: linear-gradient(0deg, #fff622 0%, #fffa89 100%);
+                border: none;
+            }
+            &_checkbox:checked + &_view &_icon {
+                opacity: 1;
+            }
+        }
+        &_receive {
+            margin-top: 53px;
+            padding-bottom: 32px;
+        }
+        &_items {
+            margin-top: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        &_item {
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            font-weight: 400;
+            font-size: 20px;
+            color: #000;
+        }
+        &_image {
+            margin-top: -28px;
+            position: absolute;
+            right: 0;
+            width: 50%;
+            img {
+                width: 100%;
+            }
+        }
+        .title_36 {
+            margin-top: 49px;
+        }
+        .thin {
+            margin-top: 13px;
+        }
+        .descr_16 {
+            margin-top: 14px;
+        }
     }
     .title_40 {
         width: 78.83%;
