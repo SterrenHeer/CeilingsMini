@@ -1,5 +1,11 @@
 @media (max-width:1440px) {
-
+    .survey {
+        &_result {
+            &_buttons {
+                width: 90%;
+            }
+        }
+    }
 }
 @media (max-width: 1200px) {
     .survey {
@@ -95,6 +101,50 @@
         &_bottom {
             margin-top: 34px;
             justify-content: space-between;
+        }
+        &_result {
+            &_content {
+                padding-left: 0;
+                width: 87.18%;
+                margin: 0 auto;
+            }
+            &_buttons {
+                margin-top: 25px;
+                width: 100%;
+            }
+            &_form {
+                margin-top: 32px;
+                width: 100%;
+                gap: 16px;
+                &_content {
+                    gap: 16px;
+                }
+                &_input {
+                    height: 48px;
+                    background: #faf9fb;
+                }
+            }
+            &_receive {
+                margin-top: 29px;
+            }
+            &_items {
+                margin-top: 11px;
+            }
+            &_image {
+                display: none;
+            }
+            .title_36 {
+                margin-top: 34px;
+            }
+            .thin {
+                margin-top: 9px;
+            }
+            img.thin {
+                margin-top: 0;
+            }
+            .descr_16 {
+                margin-top: 4px;
+            }
         }
         .title_40 {
             width: 100%;

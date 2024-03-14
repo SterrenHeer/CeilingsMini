@@ -1,5 +1,9 @@
 @media (max-width:1440px) {
-
+    .btn {
+        &_social {
+            font-size: 16px;
+        }
+    }
 }
 @media (max-width: 1200px) {
 
@@ -47,6 +51,21 @@
                 height: 48px;
                 border-radius: 0;
                 font-size: 16px;
+            }
+            &_result {
+                width: 100%;
+                height: 48px;
+                border-radius: 0;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+        &_social {
+            width: 47.05%;
+            height: 48px;
+            font-size: 14px;
+            a {
+                gap: 9px;
             }
         }
     }
