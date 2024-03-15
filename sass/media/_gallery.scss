@@ -2,10 +2,12 @@
 
 }
 @media (max-width: 1200px) {
-
+    .gallery {
+        padding-top: 104px;
+    }
 }
 @media (max-width: 992px) {
-
+    
 }
 @media (max-width: 768px) {
     .gallery {
@@ -41,7 +43,8 @@
             flex-direction: column;
             gap: 24px;
             &_image {
-                width: 100%;
+                width: 68.58%;
+                margin: 0 auto;
             }
             &_content {
                 width: 100%;

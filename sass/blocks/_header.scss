@@ -3,7 +3,6 @@
     width: 100%;
 	z-index: 3;
 	padding-top: 18px;
-    padding-bottom: 8px;
     backdrop-filter: blur(25px);
 	&_menu, &_social, &_contacts {
 		display: flex;
@@ -26,6 +25,10 @@
     &_contacts {
         flex-direction: column;
         align-items: end;
+        li {
+            display: flex;
+            align-items: center;
+        }
         img {
             margin-right: 12px;
         }
@@ -49,5 +52,5 @@
 nav {
 	display: flex;
 	justify-content: space-between;
-	height: 75px;
+	height: 89px;
 }

@@ -45,18 +45,15 @@
         }
     }
     &_images {
+        display: flex;
+        align-items: end;
         width: 38.4%;
-        .main {
+        img {
             width: 100%;
-        }
-        .optional {
-            position: absolute;
-            width: 21.5%;
-            bottom: -420px;
-            right: 0;
         }
     }
     &_test {
+        position: relative;
         &_content {
             display: flex;
             align-items: end;
@@ -75,5 +72,11 @@
         .btn_test {
             margin-top: 27px;
         }
+    }
+    &_optional {
+        position: absolute;
+        width: 21.5%;
+        bottom: -160px;
+        right: 0;
     }
 }

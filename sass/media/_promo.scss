@@ -1,32 +1,36 @@
-@media (max-width:1600px) {
+@media (max-width:1720px) {
     .promo {
+        &_content {
+            width: 69%;
+        }
         &_images {
-            .optional {
-                bottom: -220px;
+            width: 30%;
+            .main {
+                height: 100%;
+                object-fit: fill;
             }
         }
     }
 }
+@media (max-width:1600px) {
+
+}
 @media (max-width:1440px) {
-    .promo {
-        &_images {
-            .optional {
-                bottom: -280px;
-            }
-        }
-    }
+
 }
 @media (max-width: 1200px) {
     .promo {
+        &_content {
+            width: 100%;
+        }
         &_images {
-            .optional {
-                bottom: -220px;
-            }
+            display: none;
         }
     }
 }
 @media (max-width: 992px) {
     .promo {
+        padding-top: 95px;
         &_content {
             width: 100%;
             &_items {
@@ -46,7 +50,7 @@
                 }
             }
         }
-        &_images {
+        &_images, &_optional {
             display: none;
         }
     }
@@ -96,6 +100,9 @@
                 height: 4px;
             }
         }
+        .br {
+            display: block;
+        } 
     }
 }
 @media (max-width: 480px) {

@@ -14,9 +14,13 @@
     margin: 0 auto;
 }
 
+.br {
+	display: none;
+} 
+
 @import 'blocks/title';
 @import 'blocks/button';
-@import 'blocks/modal';
+@import 'blocks/consult';
 @import 'blocks/header';
 @import 'blocks/promo';
 @import 'blocks/gallery';

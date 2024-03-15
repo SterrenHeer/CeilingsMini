@@ -204,8 +204,10 @@
     }
     &_bottom {
         margin-top: 26px;
+        height: 100%;
         display: flex;
         justify-content: center;
+        align-items: end;
     }
     &_hint {
         position: absolute;

@@ -1,5 +1,23 @@
+@media (max-width:1600px) {
+    .btn {
+        &_test {
+            &_promo {
+                font-size: 22px;
+            }
+            &_survey {
+                font-size: 18px;
+            }
+            &_gallery {
+                font-size: 18px;
+            }
+        }
+    }
+}
 @media (max-width:1440px) {
     .btn {
+        &_header {
+            font-size: 12px;
+        }
         &_social {
             font-size: 16px;
         }
@@ -10,6 +28,11 @@
 }
 @media (max-width: 992px) {
     .btn {
+        &_header {
+            width: 92.81%;
+            height: 31px;
+            font-size: 10px;
+        }
         &_test {
             &_survey {
                 width: 47.06%;
@@ -26,11 +49,6 @@
 }
 @media (max-width: 768px) {
     .btn {
-        &_header {
-            width: 92.81%;
-            height: 31px;
-            font-size: 10px;
-        }
         &_promo {
             width: 86.81%;
             height: 35px;
