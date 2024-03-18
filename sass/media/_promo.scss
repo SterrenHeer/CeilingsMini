@@ -1,10 +1,6 @@
 @media (max-width:1720px) {
     .promo {
-        &_content {
-            width: 69%;
-        }
         &_images {
-            width: 30%;
             .main {
                 height: 100%;
                 object-fit: fill;
@@ -13,15 +9,35 @@
     }
 }
 @media (max-width:1600px) {
-
+    .promo {
+        &_content {
+            width: 60%;
+        }
+        &_images {
+            width: 39%;
+        }
+    }
 }
 @media (max-width:1440px) {
-
+    .promo {
+        &_content {
+            width: 57%;
+            &_item {
+                padding: 12px 3px 0px 9px;
+            }
+        }
+        &_images {
+            width: 42%;
+        }
+    }
 }
 @media (max-width: 1200px) {
     .promo {
         &_content {
             width: 100%;
+            &_item {
+                padding: 15px 12px 15px 12px;
+            }
         }
         &_images {
             display: none;
@@ -41,7 +57,6 @@
             &_item {
                 width: calc(48.23% - 24px);
                 min-height: 134px;
-                padding: 15px 12px 15px 12px;
                 &_image {
                     bottom: -10px;
                     right: -8px;

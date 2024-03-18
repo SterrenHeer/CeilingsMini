@@ -177,15 +177,6 @@ function modal(triggerSelector, closeSelector, modalSelector) {
             closeModal(modalSelector);
         }
     });
-
-    function showModalByScroll() {
-        if (window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1) {
-            openModal(modalSelector);
-            window.removeEventListener('scroll', showModalByScroll);
-        }
-    }
-
-    window.addEventListener('scroll', showModalByScroll);
 }
 
 slider({
