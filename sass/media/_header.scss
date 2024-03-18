@@ -1,5 +1,22 @@
+@media (max-width:1600px) {
+    .header {
+        &_social {
+            img {
+                width: 43px;
+                height: 43px;
+            }
+        }
+    }
+}
 @media (max-width:1440px) {
-
+    .header {
+        &_social {
+            img {
+                width: 38px;
+                height: 38px;
+            }
+        }
+    }
 }
 @media (max-width: 1200px) {
     .header {
