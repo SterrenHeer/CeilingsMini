@@ -185,6 +185,9 @@
             gap: 19px;
             cursor: pointer;
         }
+        &_label.social {
+            width: 45.9%;
+        }
         &_view {
             display: flex;
             align-items: center;
@@ -201,6 +204,9 @@
         &_radio:checked + &_view {
             background-color: #fff622;
             border: none;
+        }
+        &_radio.social:checked + .btn_social {
+            transform: scale(1.1)
         }
     }
     &_bottom {
@@ -241,7 +247,7 @@
                 gap: 24px;
             }
             &_input {
-                height: 56px;
+                height: 32px;
                 padding: 12px 22px;
                 background: #ebebeb;
                 font-weight: 400;

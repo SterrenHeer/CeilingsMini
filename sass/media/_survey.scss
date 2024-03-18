@@ -90,6 +90,9 @@
             &_label {
                 gap: 7px;
             }
+            &_label.social {
+                width: 47.05%;
+            }
             &_view {
                 min-width: 24px;
                 height: 24px;
@@ -120,7 +123,7 @@
                     gap: 16px;
                 }
                 &_input {
-                    height: 48px;
+                    height: 24px;
                     background: #faf9fb;
                 }
             }

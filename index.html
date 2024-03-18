@@ -662,12 +662,18 @@
                             <div class="title thin">Mes atlikome apskaičiavimą </div>
                             <div class="descr descr_16">Susisiekite su mumis per jums, patogiausia susisiekimo būdą</div>
                             <div class="survey_result_buttons">
-                                <button class="btn btn_social btn_social_whatsapp">
-                                    <a href="#"><img src="icons/whats_app.svg" alt="whatsapp">WhatsApp</a>
-                                </button>
-                                <button class="btn btn_social btn_social_telegram">
-                                    <a href="#"><img src="icons/telegram.svg" alt="telegram">Telegram</a>
-                                </button>
+                                <label for="survey_form_radio_7-1" class="survey_form_label social">
+                                    <input type="radio" name="contact" id="survey_form_radio_7-1" class="survey_form_radio social" value="telegram" required>
+                                    <span class="btn btn_social btn_social_telegram">
+                                        <img src="icons/telegram.svg" alt="telegram">Telegram
+                                    </span>
+                                </label>
+                                <label for="survey_form_radio_7-2" class="survey_form_label social">
+                                    <input type="radio" name="contact" id="survey_form_radio_7-2" class="survey_form_radio social" value="whatsapp" required>
+                                    <span class="btn btn_social btn_social_whatsapp">
+                                        <img src="icons/whats_app.svg" alt="whatsapp">WhatsApp
+                                    </span>
+                                </label>
                             </div>
                             <div class="survey_result_form" action="#">
                                 <div class="survey_result_form_content">
