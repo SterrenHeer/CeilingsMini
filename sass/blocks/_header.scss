@@ -33,6 +33,12 @@
             margin-right: 12px;
         }
     }
+    &_social {
+        img {
+            width: 43px;
+            height: 43px;
+        }
+    }
 	&_contacts, &_social {
 		gap: 10px 14px;
 	}

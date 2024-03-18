@@ -23,7 +23,7 @@
 }
 @media (max-width:1600px) {
     .title {
-        font-size: 16px;
+        font-size: 17px;
         &_32 {
             font-size: 27px;
         }
@@ -37,16 +37,22 @@
             font-size: 46px;
         }
     }
+    .title.mini {
+        font-size: 16px;
+    }
     .descr {
         font-size: 13px;
         &_16 {
+            font-size: 15px;
+        }
+        &_16.mini {
             font-size: 13px;
         }
     }
 }
 @media (max-width:1440px) {
     .title {
-        font-size: 12px;
+        font-size: 15px;
         &_32 {
             font-size: 24px;
         }
@@ -60,15 +66,21 @@
             font-size: 35px;
         }
     }
+    .title.mini {
+        font-size: 12px;
+    }
     .descr {
         font-size: 12px;
         &_16 {
+            font-size: 15px;
+        }
+        &_16.mini {
             font-size: 11px;
         }
     }
 }
 @media (max-width: 1200px) {
-    .title {
+    .title, .title.mini {
         font-size: 15px;
         &_32 {
             font-size: 22px;
@@ -85,7 +97,7 @@
     }
     .descr {
         font-size: 11px;
-        &_16 {
+        &_16, &_16.mini {
             font-size: 15px;
         }
     }
