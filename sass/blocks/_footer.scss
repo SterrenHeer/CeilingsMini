@@ -1,7 +1,6 @@
 .footer {
     margin-top: 53px;
     padding: 23px 0;
-    min-height: 105px;
     background: #171717;
     &_items {
         display: flex;
@@ -63,17 +62,6 @@
             img {
                 height: 43px;
             }
-        }
-    }
-    &_bottom {
-        position: relative;
-        .descr {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            line-height: 129%;
-            color: #f9f9fb;
         }
     }
     .underline {
