@@ -38,6 +38,22 @@ counters_items.forEach((item, index) => {
     }
 });
 
+function congratulate() {
+    let roulette_btn = document.querySelector('.roulette_btn');
+    let roulette_image = document.querySelector('.roulette_image img');
+    let roulette_items = document.querySelectorAll('.roulette_content_item');
+    
+    roulette_image.style.animation = 'spin 1s linear 0s infinite'
+    setTimeout(function(){
+        roulette_btn.classList.add('hide');
+        roulette_items.forEach((item) => {
+            item.classList.toggle('hide');
+        });
+        roulette_image.style.animation = 'spin 17s linear 0s infinite'
+    }, 3000);
+    
+}
+
 function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow, prevArrow}) {
     let slideIndex = 1,
         offset = 0,
@@ -190,3 +206,4 @@ slider({
 });
 
 modal('[data-modal]', 'data-close', '.consult');
+modal('[data-modal-2]', 'data-close', '.roulette');

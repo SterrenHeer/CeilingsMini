@@ -619,7 +619,7 @@
                     </div>
                     <div class="survey_bottom">
                         <button class="btn btn_back" data-show="survey_wrapper_2">Atgal</button>
-                        <button type="submit" data-show="survey_wrapper_4" class="btn btn_test btn_test_survey">Toliau</button>
+                        <button data-show="survey_wrapper_4" class="btn btn_test btn_test_survey">Toliau</button>
                     </div>
                     <div class="survey_hint">
                         <img src="icons/click.svg" alt="hint">
@@ -702,7 +702,7 @@
                     </div>
                     <div class="survey_bottom">
                         <button class="btn btn_back" data-show="survey_wrapper_3">Atgal</button>
-                        <button type="submit" data-show="survey_wrapper_5" class="btn btn_test btn_test_survey">Toliau</button>
+                        <button data-show="survey_wrapper_5" class="btn btn_test btn_test_survey">Toliau</button>
                     </div>
                     <div class="survey_hint">
                         <img src="icons/click.svg" alt="hint">
@@ -984,6 +984,36 @@
             </div>
 		</div>
 	</div>
+    <div class="roulette">
+        <div class="roulette_modal">
+            <div class="roulette_image">
+                <img src="img/wheel.png" alt="wheel">
+            </div>
+            <div class="roulette_row">
+                <img src="img/row.png" alt="row">
+            </div>
+            <div class="roulette_manager">
+                <img src="img/manager.png" alt="manager">
+            </div>
+            <div class="roulette_close"><img data-close src="icons/close.svg" alt="close"></div>
+            <div class="roulette_content">
+                <div class="roulette_content_item">
+                    <div class="title title_70 bold">Крутите колесо!</div>
+                    <div class="title title_24">И выиграйте бонус при покупке нового потолка!</div>
+                    <button class="btn btn_test btn_test_roulette" onclick="congratulate()">Крутить</button>
+                </div>
+                <div class="roulette_content_item hide">
+                    <div class="title title_70 bold">Поздравляем!</div>
+                    <div class="title title_24">Вы выиграли бонус!</div>
+                    <form class="roulette_form" action="#">
+                        <input type="text" name="phone" placeholder="+375 __ ___ __ __" class="roulette_form_input" required> 
+                        <button type="submit" class="btn btn_test btn_test_roulette">Забрать бонус!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button data-modal-2 class="roulette_btn"><img src="img/gift.png" alt="gift"></button>
     <script src="js/script.js"></script>
 </body>
 </html>
