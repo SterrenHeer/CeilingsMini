@@ -1,0 +1,43 @@
+@media (max-width:1440px) {
+
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+    .hundredth {
+        &_modal {
+            width: 80%;
+            max-width: none;
+            max-height: 399px;
+        }
+        &_close {
+            height: 16px;
+            top: 10px;
+            right: 8px;
+        }
+        &_form {
+            margin-top: 20px;
+            width: 94%;
+            &_input {
+                width: calc(100% - 44px);
+                height: 24px;
+            }
+        }
+        .title_32 {
+            margin-top: 19px;
+        }
+        .yellow {
+            margin-top: 16px;
+        }
+        .letter {
+            margin-top: 23px;
+        }
+    }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}

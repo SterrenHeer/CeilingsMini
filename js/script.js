@@ -235,4 +235,5 @@ slider({
 });
 
 modal('[data-modal]', 'data-close', '.consult');
-modal('[data-modal-2]', 'data-close', '.roulette');
+modal('[data-modal]', 'data-close', '.roulette');
+setTimeout(() => openModal('.hundredth'), 30000)
