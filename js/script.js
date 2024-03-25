@@ -100,6 +100,7 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
             const slideTo = e.target.getAttribute('data-slide-to');
             slideIndex = slideTo;
             offset = deleteNotDigits(width) * (slideTo - 1);
+            makeTimer(duration);
             changeActivity();
         });
     });
@@ -132,6 +133,7 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
 			slideIndex++;
 		}
 
+        makeTimer(duration);
         changeActivity();
 	});
 
@@ -148,9 +150,12 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
 			slideIndex--;
 		}
 
+        makeTimer(duration);
         changeActivity();
 	});
 
+    makeTimer(duration);
+    
     function changeActivity() {
         slidesField.style.transform = `translateX(-${offset}px)`;
         dots.forEach(dot => dot.classList.remove('active'));
@@ -161,7 +166,7 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
         if (duration == 0) {
             return;
         }
-        
+        clearInterval(timer)
         timer = setInterval(function(){
             if (offset == deleteNotDigits(width) * (slides.length - 1)) {
                 offset = 0;
@@ -182,8 +187,6 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
     function deleteNotDigits(str) {
         return +str.replace(/[^\d\.]/g, '');
     }
-
-    makeTimer(duration);
 }
 
 function openModal(modalSelector) {
@@ -228,7 +231,7 @@ slider({
     indicatorsSelector: 'gallery_slider_indicators',
     nextArrow: '.gallery_slider_next',
     prevArrow: '.gallery_slider_prev',
-    duration: 3000,
+    duration: 5000,
 });
 
 modal('[data-modal]', 'data-close', '.consult');
