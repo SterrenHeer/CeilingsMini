@@ -235,5 +235,5 @@ slider({
 });
 
 modal('[data-modal]', 'data-close', '.consult');
-modal('[data-modal]', 'data-close', '.roulette');
-setTimeout(() => openModal('.hundredth'), 30000)
+modal('[data-modal-2]', 'data-close', '.roulette');
+setTimeout(() => openModal('.hundredth'), 3000)
