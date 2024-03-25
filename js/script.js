@@ -54,9 +54,10 @@ function congratulate() {
     
 }
 
-function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow, prevArrow}) {
+function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow, prevArrow, duration = 0}) {
     let slideIndex = 1,
         offset = 0,
+        timer = 0,
         mobile = false,
         dots = [];
     const slides = document.querySelectorAll(slide),
@@ -156,9 +157,33 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
         dots[slideIndex-1].classList.add('active');
     }
 
+    function makeTimer(duration){
+        if (duration == 0) {
+            return;
+        }
+        
+        timer = setInterval(function(){
+            if (offset == deleteNotDigits(width) * (slides.length - 1)) {
+                offset = 0;
+            } else {
+                offset += deleteNotDigits(width);
+            }
+    
+            if (slideIndex == slides.length) {
+                slideIndex = 1;
+            } else {
+                slideIndex++;
+            }
+    
+            changeActivity();
+        },duration);
+    }
+
     function deleteNotDigits(str) {
         return +str.replace(/[^\d\.]/g, '');
     }
+
+    makeTimer(duration);
 }
 
 function openModal(modalSelector) {
@@ -202,7 +227,8 @@ slider({
     slide: '.gallery_slide',
     indicatorsSelector: 'gallery_slider_indicators',
     nextArrow: '.gallery_slider_next',
-    prevArrow: '.gallery_slider_prev'
+    prevArrow: '.gallery_slider_prev',
+    duration: 3000,
 });
 
 modal('[data-modal]', 'data-close', '.consult');
