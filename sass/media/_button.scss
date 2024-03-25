@@ -21,10 +21,21 @@
         &_social {
             font-size: 16px;
         }
+        &_test {
+            &_roulette {
+                width: 73.33%;
+            }
+        }
     }
 }
 @media (max-width: 1200px) {
-
+    .btn {
+        &_test {
+            &_roulette {
+                width: 85%;
+            }
+        }
+    }
 }
 @media (max-width: 992px) {
     .btn {
