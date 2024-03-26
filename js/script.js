@@ -38,20 +38,47 @@ counters_items.forEach((item, index) => {
     }
 });
 
+function deleteNotDigits(str) {
+    return +str.replace(/[^\d\.]/g, '');
+}
+
 function congratulate() {
     let roulette_btn = document.querySelector('.roulette_btn');
     let roulette_image = document.querySelector('.roulette_image img');
+    let roulette_row = document.querySelector('.roulette_row img');
+    let roulette_result = document.querySelector('.roulette_result');
     let roulette_items = document.querySelectorAll('.roulette_content_item');
+    let angle = '', result;
+
+    roulette_image.style.animation = 'none';
+    roulette_row.style.animation = 'none';
     
-    roulette_image.style.animation = 'spin 1s linear 0s infinite'
+    let timer = setInterval(function() {
+        angle = deleteNotDigits(angle) + 3 + 'deg';
+        roulette_image.style.transform = `rotate(${angle})`;
+    }, 10);
+
     setTimeout(function(){
         roulette_btn.classList.add('hide');
         roulette_items.forEach((item) => {
             item.classList.toggle('hide');
         });
-        roulette_image.style.animation = 'spin 17s linear 0s infinite'
-    }, 3000);
-    
+        clearInterval(timer);
+
+        if ((deleteNotDigits(angle) / 60) % 6 == 0 || (deleteNotDigits(angle) / 60) % 6 == 0.5) {
+            result = 1;
+        } else {
+            result = 7 - (deleteNotDigits(angle) / 60) % 6;
+        }
+        
+        if (result - Math.floor(result) >= 0.5) {
+            result = Math.ceil(result);
+        } else {
+            result = Math.floor(result);
+        }
+
+        roulette_result.value = result;
+    }, Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000);
 }
 
 function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow, prevArrow, duration = 0}) {
@@ -183,10 +210,6 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
             changeActivity();
         },duration);
     }
-
-    function deleteNotDigits(str) {
-        return +str.replace(/[^\d\.]/g, '');
-    }
 }
 
 function openModal(modalSelector) {
@@ -236,4 +259,4 @@ slider({
 
 modal('[data-modal]', 'data-close', '.consult');
 modal('[data-modal-2]', 'data-close', '.roulette');
-setTimeout(() => openModal('.hundredth'), 3000)
+setTimeout(() => openModal('.hundredth'), 40000)
