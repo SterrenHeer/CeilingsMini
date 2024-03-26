@@ -65,7 +65,7 @@ function congratulate() {
         });
         clearInterval(timer);
 
-        if ((deleteNotDigits(angle) / 60) % 6 == 0 || (deleteNotDigits(angle) / 60) % 6 == 0.5) {
+        if ((deleteNotDigits(angle) / 60) % 6 == 0 || (deleteNotDigits(angle) / 60) % 6 <= 0.5) {
             result = 1;
         } else {
             result = 7 - (deleteNotDigits(angle) / 60) % 6;
