@@ -70,12 +70,8 @@ function congratulate() {
         } else {
             result = 7 - (deleteNotDigits(angle) / 60) % 6;
         }
-        
-        if (result - Math.floor(result) >= 0.5) {
-            result = Math.ceil(result);
-        } else {
-            result = Math.floor(result);
-        }
+    
+        result = Math.round(result);
 
         roulette_result.value = result;
     }, Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000);
@@ -96,6 +92,7 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
         mediaQuery = window.matchMedia('(max-width: 768px)');
 
     let width = window.getComputedStyle(slidesWrapper).width;
+    width = Math.floor(deleteNotDigits(width)) + 'px';
 
     let indicators = document.createElement('ol');
     indicators.classList.add(indicatorsSelector);

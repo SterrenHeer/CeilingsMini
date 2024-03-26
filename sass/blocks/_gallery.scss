@@ -17,6 +17,7 @@
         }
         &_wrapper {
             overflow: hidden;
+            width: 100%;
         }
         &_inner {
             display: flex;
@@ -46,7 +47,8 @@
     }
     &_slide {
         display: flex;
-        gap: 7%;
+        justify-content: space-between;
+        width: 100%;
         &_image {
             width: 52%;
             img {
