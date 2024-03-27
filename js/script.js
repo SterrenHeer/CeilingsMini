@@ -57,7 +57,11 @@ function congratulate() {
     let roulette_row = document.querySelector('.roulette_row img');
     let roulette_result = document.querySelector('.roulette_result');
     let roulette_items = document.querySelectorAll('.roulette_content_item');
-    let angle = '', result;
+    let angle = '', result, rotate;
+
+    const media = window.matchMedia('(max-width: 992px)');
+    media.matches ? rotate = 180 : rotate = 90;
+    roulette_row.style.transform = `rotate(${rotate}deg)`;
 
     roulette_image.style.animation = 'none';
     roulette_row.style.animation = 'none';
@@ -74,14 +78,13 @@ function congratulate() {
         });
         clearInterval(timer);
 
-        if ((deleteNotDigits(angle) / 60) % 6 == 0 || (deleteNotDigits(angle) / 60) % 6 <= 0.5) {
+        if (((deleteNotDigits(angle) - rotate) / 60) % 6 == 0 || ((deleteNotDigits(angle) - rotate) / 60) % 6 <= 0.5) {
             result = 1;
         } else {
-            result = 7 - (deleteNotDigits(angle) / 60) % 6;
+            result = 7 - ((deleteNotDigits(angle) - rotate) / 60) % 6;
         }
     
         result = Math.round(result);
-
         roulette_result.value = result;
     }, Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000);
 }
@@ -265,4 +268,4 @@ slider({
 
 modal('[data-modal]', 'data-close', '.consult');
 modal('[data-modal-2]', 'data-close', '.roulette');
-setTimeout(() => openModal('.hundredth'), 4000)
+setTimeout(() => openModal('.hundredth'), 40000)
