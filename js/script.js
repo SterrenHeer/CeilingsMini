@@ -73,9 +73,8 @@ function congratulate() {
 
     setTimeout(function(){
         roulette_btn.classList.add('hide');
-        roulette_items.forEach((item) => {
-            item.classList.toggle('hide');
-        });
+        roulette_items[0].classList.add('hide');
+        roulette_items[1].classList.remove('hide');
         clearInterval(timer);
 
         if (((deleteNotDigits(angle) - rotate) / 60) % 6 == 0 || ((deleteNotDigits(angle) - rotate) / 60) % 6 <= 0.5) {

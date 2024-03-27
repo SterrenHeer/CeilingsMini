@@ -66,6 +66,12 @@
 			height: 56px;
 			font-weight: 600;
 			font-size: 20px;
+			&_repeat {
+				height: 36px;
+				background: rgba(193, 193, 193, 0.86);
+				font-weight: 500;
+				font-size: 18px;
+			}
 		}
 	}
 	&_back {
