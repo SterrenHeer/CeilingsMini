@@ -251,8 +251,7 @@ slider({
     slide: '.gallery_slide',
     indicatorsSelector: 'gallery_slider_indicators',
     nextArrow: '.gallery_slider_next',
-    prevArrow: '.gallery_slider_prev',
-    duration: 5000,
+    prevArrow: '.gallery_slider_prev'
 });
 
 modal('[data-modal]', 'data-close', '.consult');

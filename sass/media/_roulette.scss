@@ -72,7 +72,11 @@
     }
 }
 @media (max-width: 768px) {
-
+    .roulette{
+        &_manager{
+            display: none;
+        }
+    }
 }
 @media (max-width: 480px) {
 

@@ -21,8 +21,18 @@
                 position: absolute;
                 top: calc(50% - 20px);
             }
-            &_prev, &_next {
-                display: none;
+            &_prev{
+
+                left: -17px;
+                img{
+                    height: 25px;
+                }
+            }
+            &_next {
+                right: -17px;
+                img{
+                    height: 25px;
+                }
             }
             &_indicators {
                 bottom: -27px;
@@ -43,7 +53,7 @@
             flex-direction: column;
             &_image {
                 width: 68.58%;
-                margin: 0 auto;
+                margin: 0 auto 8px;
             }
             &_content {
                 width: 100%;
@@ -78,5 +88,21 @@
     }    
 }
 @media (max-width: 480px) {
+    .gallery {
+        &_slider {
+            &_prev{
+                left: -17px;
+                img{
+                    height: 15px;
+                }
+            }
+            &_next {
+                right: -17px;
 
+                img{
+                    height: 15px;
+                }
+            }
+        }
+    }
 }
