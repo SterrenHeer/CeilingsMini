@@ -131,6 +131,7 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
 
     window.addEventListener('resize', (e) => {
         width = window.getComputedStyle(slidesWrapper).width;
+        width = Math.floor(deleteNotDigits(width)) + 'px';
         slides.forEach((slide) => {
             slide.style.width = width;
         });
