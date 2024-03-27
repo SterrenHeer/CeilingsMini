@@ -980,7 +980,7 @@
                     <form class="roulette_form" action="#">
                         <input type="text" name="roulette_phone" placeholder="+370 __ ___ __ __" class="roulette_form_input" required>
                         <input type="hidden" name="roulette_result" class="roulette_result">
-                        <button type="submit" class="btn btn_test btn_test_roulette">Atsiimti premiją!</button>
+                        <button type="submit" class="btn btn_test btn_test_roulette" onclick="localStorage.setItem('roulette', 'send')">Atsiimti premiją!</button>
                     </form>
                 </div>
             </div>
@@ -996,7 +996,7 @@
                 <div class="title letter">Užpildykite formą ir gaukite<br>dovana užsakant duris</div>
                 <form class="hundredth_form" action="#">
                     <input type="text" name="hundredth_phone" placeholder="Telefonas" class="hundredth_form_input" required>
-                    <button type="submit" class="btn btn_test btn_test_form">Gauti dovaną</button>
+                    <button type="submit" class="btn btn_test btn_test_form" onclick="localStorage.setItem('hundredth', 'send')">Gauti dovaną</button>
                 </form>
             </div>
         </div>

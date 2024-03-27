@@ -17,6 +17,15 @@ survey_buttons.forEach(button => {
     });
 });
 
+let roulette_btn = document.querySelector('.roulette_btn');
+let hundredth_btn = document.querySelector('.hundredth_form button');
+if (localStorage.getItem('roulette') == 'send') {
+    roulette_btn.classList.add('hide');
+}
+if (localStorage.getItem('hundredth') == 'send') {
+    hundredth_btn.classList.add('hide');
+}
+
 const area_range = document.querySelector("#area_range");
 const area_value = document.querySelector("#area_value");
 
@@ -256,4 +265,4 @@ slider({
 
 modal('[data-modal]', 'data-close', '.consult');
 modal('[data-modal-2]', 'data-close', '.roulette');
-setTimeout(() => openModal('.hundredth'), 40000)
+setTimeout(() => openModal('.hundredth'), 4000)

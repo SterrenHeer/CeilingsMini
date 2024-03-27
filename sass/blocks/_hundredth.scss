@@ -9,6 +9,7 @@
     background-color: rgba(245,245,245, 0.5);
     &_modal {
         position: absolute;
+        overflow-y: auto;
         overflow: hidden;
         padding: 50px 15px 32px 15px;
         width: 48.75%;

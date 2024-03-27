@@ -10,6 +10,7 @@
     &_modal {
         position: absolute;
         overflow: hidden;
+        overflow-y: auto;
         width: 71.14%;
         max-width: 1366px;
         height: 95vh;
@@ -75,6 +76,7 @@
     }
     &_image {
         position: absolute;
+        overflow: hidden;
         top: 50%;
         left: -277px;
         transform: translate(0, -50%);

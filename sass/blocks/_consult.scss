@@ -9,6 +9,7 @@
     background-color: rgba(245,245,245, 0.5);
     &_modal {
         position: absolute;
+        overflow-y: auto;
         width: 67.76%;
         max-width: 1114px;
         height: 95vh;
