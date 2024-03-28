@@ -22,8 +22,9 @@ let hundredth_btn = document.querySelector('.hundredth_form button');
 if (localStorage.getItem('roulette') == 'send') {
     roulette_btn.classList.add('hide');
 }
+let hundredth = setTimeout(() => openModal('.hundredth'), 4000)
 if (localStorage.getItem('hundredth') == 'send') {
-    hundredth_btn.classList.add('hide');
+    clearInterval(hundredth);
 }
 
 const area_range = document.querySelector("#area_range");
@@ -255,6 +256,29 @@ function modal(triggerSelector, closeSelector, modalSelector) {
     });
 }
 
+$("form").submit(function (event) {
+    event.preventDefault();
+    var the_form = $(this);
+    var data = the_form.serialize();
+    sendPhp(event.target.classList.value.slice(0, -5), data)
+});
+
+function sendPhp(name, data) {
+    $.ajax({
+        url: `./php/send_${name}.php`,
+        type: 'POST',
+        cache: false,
+        data: data,
+        dataType: 'html',
+        success: function (data) {
+            $(`.${name}_form`).trigger('reset');
+            setTimeout(() => {
+                window.location.replace('http://naujos-lubos.lt/');
+            }, 3000)
+        }
+    });
+}
+
 slider({
     container: '.gallery_slider',
     wrapper: '.gallery_slider_wrapper',
@@ -267,4 +291,3 @@ slider({
 
 modal('[data-modal]', 'data-close', '.consult');
 modal('[data-modal-2]', 'data-close', '.roulette');
-setTimeout(() => openModal('.hundredth'), 40000)
