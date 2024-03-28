@@ -22,7 +22,7 @@ let hundredth_btn = document.querySelector('.hundredth_form button');
 if (localStorage.getItem('roulette') == 'send') {
     roulette_btn.classList.add('hide');
 }
-let hundredth = setTimeout(() => openModal('.hundredth'), 4000)
+let hundredth = setTimeout(() => openModal('.hundredth'), 40000)
 if (localStorage.getItem('hundredth') == 'send') {
     clearInterval(hundredth);
 }
@@ -258,18 +258,21 @@ function modal(triggerSelector, closeSelector, modalSelector) {
 
 $("form").submit(function (event) {
     event.preventDefault();
-    var the_form = $(this);
-    var data = the_form.serialize();
-    sendPhp(event.target.classList.value.slice(0, -5), data)
+    let name = event.target.classList.value.slice(0, -5);
+    let formData = new FormData(document.querySelector(`.${name}_form`));
+    sendPhp(name, formData);
 });
 
 function sendPhp(name, data) {
+    console.log(data)
     $.ajax({
         url: `./php/send_${name}.php`,
         type: 'POST',
         cache: false,
         data: data,
         dataType: 'html',
+        processData: false,
+        contentType: false,
         success: function (data) {
             $(`.${name}_form`).trigger('reset');
             setTimeout(() => {
