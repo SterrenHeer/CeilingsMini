@@ -158,7 +158,19 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
     }); 
 
     next.addEventListener("click", () => {
-		if (offset == deleteNotDigits(width) * (slides.length - 1)) {
+		moveNext();
+        makeTimer(duration);
+	});
+
+    prev.addEventListener("click", () => {
+		movePrev();
+        makeTimer(duration);
+	});
+
+    makeTimer(duration);
+
+    function moveNext() {
+        if (offset == deleteNotDigits(width) * (slides.length - 1)) {
 			offset = 0;
 		} else {
 			offset += deleteNotDigits(width);
@@ -170,12 +182,11 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
 			slideIndex++;
 		}
 
-        makeTimer(duration);
         changeActivity();
-	});
+    }
 
-    prev.addEventListener("click", () => {
-		if (offset == 0) {
+    function movePrev() {
+        if (offset == 0) {
 			offset = deleteNotDigits(width) * (slides.length - 1);
 		} else {
 			offset -= deleteNotDigits(width);
@@ -187,11 +198,8 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
 			slideIndex--;
 		}
 
-        makeTimer(duration);
         changeActivity();
-	});
-
-    makeTimer(duration);
+    }
     
     function changeActivity() {
         slidesField.style.transform = `translateX(-${offset}px)`;
@@ -204,22 +212,41 @@ function slider({container, wrapper, field, slide, indicatorsSelector, nextArrow
             return;
         }
         clearInterval(timer)
-        timer = setInterval(function(){
-            if (offset == deleteNotDigits(width) * (slides.length - 1)) {
-                offset = 0;
-            } else {
-                offset += deleteNotDigits(width);
-            }
-    
-            if (slideIndex == slides.length) {
-                slideIndex = 1;
-            } else {
-                slideIndex++;
-            }
-    
-            changeActivity();
-        },duration);
+        timer = setInterval(moveNext(), duration);
     }
+
+    let startX;
+    let endX;
+
+    const start = (e) => {
+        startX = e.pageX || e.touches[0].pageX;	
+    }
+
+    const end = () => {
+        if (endX < startX) {
+            moveNext();
+            makeTimer(duration);
+        }  
+        if (endX > startX) {
+            movePrev();
+            makeTimer(duration);
+        }
+    }
+
+    const move = (e) => {
+        e.preventDefault();
+        endX = e.pageX || e.touches[0].pageX;
+    }
+
+    slidesField.addEventListener('mousedown', start);
+    slidesField.addEventListener('touchstart', start);
+
+    slidesField.addEventListener('mousemove', move);
+    slidesField.addEventListener('touchmove', move);
+
+    slidesField.addEventListener('mouseleave', end);
+    slidesField.addEventListener('mouseup', end);
+    slidesField.addEventListener('touchend', end);
 }
 
 function openModal(modalSelector) {
