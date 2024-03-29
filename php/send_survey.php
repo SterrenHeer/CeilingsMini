@@ -17,6 +17,12 @@ $lamps = ($_POST['lamps']);
 $elements = ($_POST['elements']);
 $contact = ($_POST['contact']);
 
+$utm_source = $_POST['utm_source'];
+$utm_medium = $_POST['utm_medium'];
+$utm_campaign = $_POST['utm_campaign'];
+$utm_content = $_POST['utm_content'];
+$utm_term = $_POST['utm_term'];
+
 $arr = array(
     'Сайт:' => 'http://naujos-lubos.lt/',
     'Тема:' => $theme,
@@ -32,6 +38,13 @@ $arr = array(
     'Количество углов в помещении, шт:' => $angles,
     'Количество светильников, шт:' => $lamps,
     'Выберите дополнительные элементы:' => $elements,
+    '' => '',
+    'UTM метки' => '',
+    'utm_source:' => $utm_source,
+    'utm_medium:' => $utm_medium,
+    'utm_campaign:' => $utm_campaign,
+    'utm_content:' => $utm_content,
+    'utm_term:' => $utm_term,
 );
 
 foreach($arr as $key => $value) {

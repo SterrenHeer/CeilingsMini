@@ -6,8 +6,38 @@
     <title>Naujos lubos</title>
     <link type="image/x-icon" rel="shortcut icon" href="icons/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(96872236, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/96872236" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NFN45HTH');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFN45HTH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <nav class="container">
             <ul class="header_menu">
@@ -853,7 +883,12 @@
                                 <div class="survey_result_form_content">
                                     <input type="text" name="phone" placeholder="+370 __ ___ __ __" class="survey_result_form_input" required>
                                     <input type="hidden" name="theme" value="Заявка с квиза">
-                                    <button type="submit" class="btn btn_test btn_test_result">Gauti apskaičiavimą + nuolaida -15%</button>
+                                    <input type="hidden" name="utm_source" value="">
+                                    <input type="hidden" name="utm_medium" value="">
+                                    <input type="hidden" name="utm_campaign" value="">
+                                    <input type="hidden" name="utm_content" value="">
+                                    <input type="hidden" name="utm_term" value="">
+                                    <button type="submit" class="btn btn_test btn_test_result" onclick="ym(96872236,'reachGoal','quiz')">Gauti apskaičiavimą + nuolaida -15%</button>
                                 </div>
                                 <div class="survey_result_form_bottom">
                                     <label for="survey_result_form_checkbox" class="survey_result_form_label descr">
@@ -920,7 +955,7 @@
                     <div class="consult_form_content">
                         <input type="text" name="phone" placeholder="+370 __ ___ __ __" class="consult_form_input" required>
                         <input type="hidden" name="theme" value="Клиент хочет «Рассчитать стоимость»">
-                        <button type="submit" class="btn btn_test btn_test_form">Siųsti</button>
+                        <button type="submit" class="btn btn_test btn_test_form" onclick="ym(96872236,'reachGoal','consult')">Siųsti</button>
                     </div>
                     <div class="consult_form_bottom">
                         <label for="consult_form_checkbox" class="consult_form_label descr">
@@ -983,7 +1018,7 @@
                         <input type="text" name="phone" placeholder="+370 __ ___ __ __" class="roulette_form_input" required>
                         <input type="hidden" name="result" class="roulette_result">
                         <input type="hidden" name="theme" value="Подарок из рулетки">
-                        <button type="submit" class="btn btn_test btn_test_roulette" onclick="localStorage.setItem('roulette', 'send')">Atsiimti premiją!</button>
+                        <button type="submit" class="btn btn_test btn_test_roulette" onclick="localStorage.setItem('roulette', 'send'); ym(96872236,'reachGoal','wheel');">Atsiimti premiją!</button>
                         <button class="btn btn_test btn_test_roulette btn_test_roulette_repeat" onclick="congratulate()">Pakartoti</button>
                     </form>
                 </div>
@@ -1001,7 +1036,7 @@
                 <form class="hundredth_form" action="#">
                     <input type="text" name="phone" placeholder="Telefonas" class="hundredth_form_input" required>
                     <input type="hidden" name="theme" value="Сотый посетитель">
-                    <button type="submit" class="btn btn_test btn_test_form" onclick="localStorage.setItem('hundredth', 'send')">Gauti dovaną</button>
+                    <button type="submit" class="btn btn_test btn_test_form" onclick="localStorage.setItem('hundredth', 'send'); ym(96872236,'reachGoal','posetitel');">Gauti dovaną</button>
                 </form>
             </div>
         </div>
