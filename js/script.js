@@ -1,3 +1,18 @@
+// let baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+//         let newUrl = baseUrl + '?utm_source=yandex&utm_medium=cpc&utm_campaign=%7Bcampaign_name_lat%7D&utm_content=%7Bad_id%7D&utm_term=%7Bkeyword%7D';
+//         history.pushState(null, null, newUrl);
+let url = new URL(window.location.href),
+    utms_names = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'],
+    utms = [];
+
+utms_names.forEach(name => {
+    let utm_inputs = document.querySelectorAll(`.${name}`);
+    utm_inputs.forEach(input => {
+        input.value = url.searchParams.get(`${name}`);
+        console.log(input.value)
+    });
+});
+
 const header_toggler = document.querySelector('.header_toggler');
 const header_contacts = document.querySelector('.header_contacts');
 
@@ -291,7 +306,6 @@ $("form").submit(function (event) {
 });
 
 function sendPhp(name, data) {
-    console.log(data)
     $.ajax({
         url: `./php/send_${name}.php`,
         type: 'POST',
