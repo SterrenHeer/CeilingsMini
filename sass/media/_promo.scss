@@ -68,6 +68,12 @@
         &_images, &_optional {
             display: none;
         }
+        .mobile {
+            display: block;
+        }
+        .btn_promo {
+            margin-top: 24px;
+        }
     }
 }
 @media (max-width: 768px) {
@@ -107,6 +113,9 @@
         .br {
             display: block;
         } 
+        .btn_promo {
+            margin-top: 12px;
+        }
     }
 }
 @media (max-width: 480px) {
