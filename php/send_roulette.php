@@ -1,7 +1,7 @@
 <?php
 
-$token = "7123887500:AAGi-aVbkiSVnHC6f5iP0flwDkla3xnhIE0";
-$chat_id = "-4136708784";
+$token = "7090713063:AAHAnxgBAXscTYjc6GgfH6vsOCVdKtz4v6s";
+$chat_id = "-1002119107766";
 
 $phone = ($_POST['phone']);
 $theme = ($_POST['theme']);
@@ -15,7 +15,7 @@ $utm_content = $_POST['utm_content'];
 $utm_term = $_POST['utm_term'];
 
 $arr = array(
-    'Сайт:' => 'http://naujos-lubos.lt/',
+    'Сайт:' => 'https://naujos-lubos.lt/',
     'Тема:' => $theme,
     'Телефон:' => $phone,
     'Выигрышная позиция:' => $result,

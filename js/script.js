@@ -309,7 +309,7 @@ $("form").submit(function (event) {
 
 function sendPhp(name, data) {
     $.ajax({
-        url: `./php/send_${name}.php`,
+        url: `/php/send_${name}.php`,
         type: 'POST',
         cache: false,
         data: data,
@@ -318,9 +318,12 @@ function sendPhp(name, data) {
         contentType: false,
         success: function (data) {
             $(`.${name}_form`).trigger('reset');
-            setTimeout(() => {
-                window.location.replace('http://naujos-lubos.lt/');
-            }, 3000)
+            closeModal(`.${name}`)
+            openModal('.thanks');
+            setTimeout(function(){
+                closeModal('.thanks');
+                location="#promo";
+            }, 15000)
         }
     });
 }
