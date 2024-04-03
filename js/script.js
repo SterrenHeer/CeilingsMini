@@ -104,7 +104,15 @@ function congratulate() {
         }
     
         result = Math.round(result);
-        roulette_result.value = result;
+        let results = [
+            'Скидка 20% на МАТОВЫЙ потолок', 
+            'Скидка 20% на атласный потолок', 
+            '6 ламп', 
+            '4 светодиодные панели и карниз', 
+            '-15% НА ДВУХУРОВНЕВЫЕ ПОТОЛКИ', 
+            '-20% Фотопечать на потолке'
+        ];
+        roulette_result.value = results[result - 1];
     }, Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000);
 }
 
@@ -320,7 +328,9 @@ function sendPhp(name, data) {
         contentType: false,
         success: function (data) {
             $(`.${name}_form`).trigger('reset');
-            closeModal(`.${name}`)
+            if (name != 'survey') {
+                closeModal(`.${name}`)
+            }
             openModal('.thanks');
             setTimeout(function(){
                 closeModal('.thanks');
