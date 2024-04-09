@@ -49,10 +49,13 @@ if (localStorage.getItem('hundredth') == 'send') {
 const area_range = document.querySelector("#area_range");
 const area_value = document.querySelector("#area_value");
 
-area_value.innerHTML = area_range.value;
+area_value.value = area_range.value;
 
+area_value.oninput = function() {
+    area_range.value = this.value;
+}
 area_range.oninput = function() {
-    area_value.innerHTML = this.value;
+    area_value.value = this.value;
 }
 
 const counters_items = document.querySelectorAll(".counters");
@@ -319,7 +322,7 @@ $("form").submit(function (event) {
 
 function sendPhp(name, data) {
     $.ajax({
-        url: `/php/send_${name}.php`,
+        url: `./php/send_${name}.php`,
         type: 'POST',
         cache: false,
         data: data,
