@@ -15,7 +15,6 @@ $pipes = ($_POST['pipes']);
 $angles = ($_POST['angles']);
 $lamps = ($_POST['lamps']);
 $elements = ($_POST['elements']);
-$contact = ($_POST['contact']);
 
 $utm_city = $_POST['utm_city'];
 $utm_source = $_POST['utm_source'];
@@ -28,7 +27,6 @@ $arr = array(
     'Сайт:' => 'https://naujos-lubos.lt/',
     'Тема:' => $theme,
     'Телефон:' => $phone,
-    'Мессенджер:' => $contact,
     'Город:' => $utm_city,
     '' => '',
     'Ответы на вопросы:' => ' ',

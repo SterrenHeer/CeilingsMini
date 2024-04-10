@@ -84,21 +84,4 @@
 		font-size: 16px;
 		color: #000;
 	}
-	&_social {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		width: 100%;
-		height: 56px;
-		border-radius: 0;
-		font-weight: 500;
-		font-size: 20px;
-		color: #fff;
-		&_telegram {
-			background: #08c;
-		}
-		&_whatsapp {
-			background: #25d366;
-		}
-	}
 }

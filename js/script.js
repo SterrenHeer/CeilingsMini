@@ -1,4 +1,4 @@
-$('input[name="phone"]').mask("+370 99 999 99 99");
+$('input[name="phone"]').mask("+370(999)99-999");
 
 // let baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
 // let newUrl = baseUrl + '?utm_source=yandex&utm_medium=cpc&utm_campaign=%7Bcampaign_name_lat%7D&utm_content=%7Bad_id%7D&utm_term=%7Bkeyword%7D';
@@ -41,7 +41,7 @@ let hundredth_btn = document.querySelector('.hundredth_form button');
 if (localStorage.getItem('roulette') == 'send') {
     roulette_btn.classList.add('hide');
 }
-let hundredth = setTimeout(() => openModal('.hundredth'), 40000)
+let hundredth = setTimeout(() => openModal('.hundredth'), 20000)
 if (localStorage.getItem('hundredth') == 'send') {
     clearInterval(hundredth);
 }
